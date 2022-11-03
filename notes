@@ -1,0 +1,4 @@
+python -m celery -A project --workdir $HOME/PycharmProjects/invoice_reader/project worker
+python -m celery -A project --workdir project worker
+
+docker run -p 6379:6379 -p 8001:8001 redis/redis-stack:latest

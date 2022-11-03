@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  crud_api:
+    image: crud-api
+    volumes:
+      - ./:/home
+  nginx:
+    image: nginx
+    volumes:
+      - ./:/home
+      - ./nginx:/etc/nginx/conf.d
+    ports:
+      - 8001:80
